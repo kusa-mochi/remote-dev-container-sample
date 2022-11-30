@@ -8,7 +8,10 @@ apt install -y nodejs && \
 node -v && \
 mkdir -p /app/src && \
 cd /app/src && \
-git clone https://github.com/kusa-mochi/compare-frontend-frameworks.git
+git clone --branch practice/react-electron https://github.com/kusa-mochi/compare-frontend-frameworks.git && \
+cd /app/src/compare-frontend-frameworks/react/sampleapp && \
+npm i -g yarn && \
+yarn install
 EXPOSE 80
 EXPOSE 443
 CMD ["/bin/bash"]
